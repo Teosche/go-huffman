@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"encoding/json"
+	"fmt"
 	"go-huffman/huffman"
 	"go-huffman/models"
 	"net/http"
@@ -47,5 +48,10 @@ func (c *HuffmanController) HuffmanCompression() {
 func (c *HuffmanController) handleErrorResponse(status int, message string) {
 	c.Ctx.Output.SetStatus(status)
 	c.Data["json"] = models.ErrorResponseDTO{Message: message}
-	c.ServeJSON()
+	err := c.ServeJSON()
+
+	if err != nil {
+		fmt.Println("An error occurred:", err)
+		return
+	}
 }
