@@ -16,7 +16,7 @@ Follow the steps below to get started with the Huffman Compression project:
 
 1. Clone the repository:
   ```
- git clone https://github.com/your-username/huffman-compression.git
+ git clone https://github.com/Teosche/huffman-compression.git
   ```
    
 2. Change into the project directory:
